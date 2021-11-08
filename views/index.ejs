@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Expressions Index</title>
+  </head>
+  <body>
+    <h1>All Expressions</h1>
+
+   <p> 
+        <ul><% for (let i = 0; i < allExpressions.rowCount; i++) { %> 
+            <li><%= allExpressions.rows[i].expression_id %> - 
+                <%= allExpressions.rows[i].description %></li>
+                <a href="/expressions/<%= allExpressions.rows[i].expression_id %>">View Page</a>
+            <% } %> 
+        </ul> 
+    
+    </p>
+
+    <a href="/new">Create new expression</a>
+
+  </body>
+</html>

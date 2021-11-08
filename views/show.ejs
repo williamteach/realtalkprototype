@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Expression</title>
+  </head>
+  <body>
+    <h1>Expression ID: <%= expression.rows[0].expression_id %> </h1>>
+    <br>
+    <h2><%= expression.rows[0].description %></h2>
+    <a href="/expressions">Back to All Expressions Page</a>
+    
+    <form method="POST" action="/expressions/<%= expression.rows[0].expression_id %>?_method=DELETE">
+      <button>DELETE</button>
+    </form>
+  </body>
+</html>
